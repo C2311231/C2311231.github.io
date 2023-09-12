@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
+    <style>
+        a {
+            color: lightgray;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body style="color: lightgray; background-color:rgb(43, 42, 42)">
     <div style="width: 100%;">
@@ -12,15 +18,15 @@
     <div style="display: flex; height: 30vh; justify-content:space-evenly;"> <!--Used css on parent element instead of width attribute because it is more responsive-->
         <div style="display:grid; grid-template-columns: 100%; grid-template-rows:80% 20%">
             <img alt="Dark Image of a few dim stars." style="margin: auto;max-height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Polaris_%28star%29.jpg/800px-Polaris_%28star%29.jpg?20111116091648">
-            <p style="margin: auto;">Polaris (star) by Heyzeuss</p>
+            <a href="https://commons.wikimedia.org/wiki/File:Polaris_%28star%29.jpg" style="margin: auto;">Polaris (star) by Heyzeuss</a>
         </div>
         <div style="display:grid; grid-template-columns: 100%; grid-template-rows:80% 20%">
             <img alt="Image of lots of blueish stars." style="margin: auto;max-height: 100%;" src="https://www.publicdomainpictures.net/pictures/70000/velka/stars-in-the-night-sky.jpg">
-            <p style="margin: auto;">Stars In The Night Sky by George Hodan</p>
+            <a href="https://www.publicdomainpictures.net/en/view-image.php?image=67167&picture=stars-in-the-night-sky" style="margin: auto;">Stars In The Night Sky by George Hodan</a>
         </div>
         <div style="display:grid; grid-template-columns: 100%; grid-template-rows:80% 20%;">
             <img alt="Image of lots of different color stars with orange swirl." style="margin: auto;max-height: 100%;" src="https://www.publicdomainpictures.net/pictures/160000/velka/stars-forming-like-pearls-in-a-clam.jpg">
-            <p style="margin: auto;">Stars Forming Like Pearls In A Clam by Nona Lohr</p>
+            <a href="https://www.publicdomainpictures.net/en/view-image.php?image=151450&picture=stars-forming-like-pearls-in-a-clam" style="margin: auto;">Stars Forming Like Pearls In A Clam by Nona Lohr</a>
         </div>
     </div>
 </body>
