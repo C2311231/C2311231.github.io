@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color Assignment</title>
+    <style>
+        .content {
+            width: 80vw;
+            margin: auto;
+            color: lightgray;
+        }
+        .EmptyNavBar {
+            height: 8vh;
+            background-color: darkblue;
+            width: 100vw;
+        }
+        body {
+            margin:0;
+            padding:0;
+            background-color: black;
+        }
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 15px;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="EmptyNavBar"></div>
+    <div class="content">
+        <table style="margin: auto;">
+            <caption style="font-weight: bold; font-family:Papyrus, fantasy, sans-serif;"><h1>Dark Mode Colors</h1></caption>
+            <tr>
+                <th style="background-color: #000000;">Black</th>
+                <th style="background-color: #D3D3D3; color:#000000;">Light Gray</th>
+                <th style="background-color: #00008B;">Dark Blue</th>
+                <th style="background-color: #FFFFFF; color:#000000;">White</th>
+            </tr>
+            <tr>
+                <td>#000000</td>
+                <td>#D3D3D3</td>
+                <td>#00008B</td>
+                <td>#FFFFFF</td>
+            </tr>
+            <tr>
+                <td>rgb(0,0,0)</td>
+                <td>rgb(136, 136, 136)</td>
+                <td>rgb(0, 0, 91)</td>
+                <td>rgb(255, 255, 255)</td>
+            </tr>
+            <tr>
+                <td>hsl(0, 0%, 0%)</td>
+                <td>hsl(0, 0%, 83%)</td>
+                <td>hsl(240, 100%, 27%)</td>
+                <td>hsl(0, 0%, 100%)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
