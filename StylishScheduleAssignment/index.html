@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Schedule Assignment</title>
+    <style>
+        .beforeschool {
+            background-color:chocolate;
+        }
+        .afterschool {
+            background-color:crimson;
+        }
+        .cooking {
+            background-color:green !important;
+        }
+        .school {
+            background-color:darksalmon !important;
+        }
+        .tableheader {
+            background-color: black !important;
+            color: lightgray !important;
+        }
+        th {
+            font-size: large;
+        }
+        td, th {
+            padding: 10px;
+            border-radius: 9px;
+        }
+        table {
+            margin: auto;
+        }
+        .times {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+        <col class="times">
+        <col>
+        </colgroup>
+        <tr class="tableheader">
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <th>6:00 am</th>
+            <td class="beforeschool">Wake up</td>
+        </tr>
+        <tr>
+            <th>7:00 am</th>
+            <td class="beforeschool">Get ready for School</td>
+        </tr>
+        <tr>
+            <th>8:00 am</th>
+            <td class="school">English Starts</td>
+        </tr>
+        <tr>
+            <th>9:00 am</th>
+            <td class="school">Resourse starts in 30min</td>
+        </tr>
+        <tr>
+            <th>10:00 am</th>
+            <td class="school">Web Design Starts</td>
+        </tr>
+        <tr>
+            <th>11:00 am</th>
+            <td class="school">Lunch in 45min</td>
+        </tr>
+        <tr>
+            <th>12:00 pm</th>
+            <td class="school">Psych in 15min</td>
+        </tr>
+        <tr>
+            <th>1:00 pm</th>
+            <td class="school">Math in 45min</td>
+        </tr>
+        <tr>
+            <th>2:00 pm</th>
+            <td class="school">Psych meeting in 30min</td>
+        </tr>
+        <tr>
+            <th>3:00 pm</th>
+            <td class="school">School ends in 15min</td>
+        </tr>
+        <tr>
+            <th>4:00 pm</th>
+            <td class="cooking afterschool">Start cooking food</td>
+        </tr>
+        <tr>
+            <th>5:00 pm</th>
+            <td class="cooking afterschool">Check on food</td>
+        </tr>
+        <tr>
+            <th>6:00 pm</th>
+            <td class="afterschool">Eat Food</td>
+        </tr>
+    </table>
+</body>
+</html>
