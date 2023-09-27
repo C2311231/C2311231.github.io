@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    color: lightgray;
+}
+
+nav {
+    height: 5vh;
+    min-height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(53, 53, 53);
+}
+
+.content {
+    background-color: rgb(39, 39, 39);
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+nav a {
+    padding: 5px 10px;
+    border-radius: 9px;
+    background-color: rgb(39, 39, 39);
+    color: lightgray;
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+}
+
+a.active {
+    background-color: rgb(60, 60, 60);
+}
+
+nav div {
+    float: left;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: rgb(133, 133, 133);
+    color: lightgray;
+}
+
+.rightAligned div {
+    float: right;
+}
+
+.staffGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    width: 90%;
+    margin: auto
+}
+
+.gridSection {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.gridSection img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+a {
+    color: lightgray;
+    text-decoration: none;
+}
