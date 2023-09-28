@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    color:lightgray;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    height: 10vh;
+    background-color: rgb(82, 82, 82);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: lightgray;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a.selected {
+    color: rgb(146, 146, 146);
+}
+
+div.content {
+    margin: 0 10%;
+    background-color: rgb(40, 40, 40);
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+
+td, th{
+    padding: 8px;
+    white-space: nowrap;
+    border: 1px solid white;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+tr:first-of-type th{
+    border-top: none;
+}
+tr:last-of-type td{
+    border-bottom: none;
+}
+.firstCol th {
+    border-left: none;
+}
+tr td:first-child, tr th:first-child {
+    border-left: none;
+}
+tr td:last-child, tr th:last-child {
+    border-right: none;
+}
+
+input:placeholder-shown{
+    background-color: gray;
+}
+
+input {
+    border-radius: 3px;
+}

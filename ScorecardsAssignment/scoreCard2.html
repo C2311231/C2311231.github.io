@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorecards Assignment -- Card 2</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+    <nav>
+        <a href="./scoreCard1.html">Golf Scorecard</a>
+        <a href="./scoreCard2.html" class="selected">Bowling Scorecard</a>
+        <a href="./scoreCard3.html">Disk Golf Scorecard</a>
+    </nav>
+    <div class="content">
+        <h1>Bowling Scorecard:</h1>
+        <button onclick="addRow()">Add Row</button>
+        <table id="Scorecard">
+            <tr>
+                <th>Name</th>
+                <th>Round 1</th>
+                <th>Round 2</th>
+                <th>Round 3</th>
+                <th>Round 4</th>
+                <th>Round 5</th>
+                <th>Round 6</th>
+                <th>Round 7</th>
+                <th>Round 8</th>
+                <th>Round 9</th>
+                <th>Round 10</th>
+                <th>Final Score</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function addRow() {
+            document.getElementById('Scorecard').innerHTML += `            
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+                <td><input type="number" min="1" placeholder=" "></td>
+            </tr>`
+        }
+    </script>
+</body>
+</html>
