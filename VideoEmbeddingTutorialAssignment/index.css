@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: lightgray;
+}
+/* main content */
+.content {
+    margin: 10%;
+}
+
+p {
+    display: block;
+    float: right;
+    width: 45%;
+}
