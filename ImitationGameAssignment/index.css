@@ -1,0 +1,79 @@
+body div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+body {
+    padding: 20px;
+    background-color: rgb(22, 22, 22);
+}
+
+#penguins {
+    border: 1px solid black;
+    border-radius: 50%;
+    filter: sepia(20%);
+    -webkit-filter: sepia(20%);
+}
+
+#football {
+    border: 53px solid black;
+    border-image: url("./assets/tic-tac-toe.png") 48 48 round;
+    filter: grayscale();
+    -webkit-filter: grayscale();
+    padding: 0px;
+}
+
+#football img {
+    margin: 0px;
+    padding: 0px;
+}
+
+#dinosaur {
+    filter: hue-rotate(90deg) drop-shadow(12px 0px 5px black);
+    -webkit-filter: hue-rotate(90deg) drop-shadow(12px 0px 5px black);
+}
+
+#seagull {
+    background-image: linear-gradient(to bottom right, #7070ff, white);
+}
+
+#butterfly {
+    border-radius: 50% 0px;
+    filter: invert() opacity(75%);
+    -webkit-filter: invert() opacity(75%);
+}
+
+#theater p {
+    margin: auto;
+    font-size: 50px;
+    padding: 0;
+    color: white;
+    font-weight:500;
+    filter: drop-shadow(4px 4px 2px black);
+    -webkit-filter: drop-shadow(4px 4px 2px black);
+}
+
+#theater {
+    width: 400px;
+    height: 352px;
+    position: relative;
+}
+
+#theater::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 352px;
+    background-image: url("./assets/theater_stage.jpg");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-size: contain;
+}
+
+#theater p {
+    /* This will make it stack on top of the ::before */
+    position: relative;
+}
