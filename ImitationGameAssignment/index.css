@@ -74,6 +74,5 @@ body {
 }
 
 #theater p {
-    /* This will make it stack on top of the ::before */
     position: relative;
 }
