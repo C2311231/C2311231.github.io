@@ -1,0 +1,169 @@
+/* Global Styles that effect all pages mostly for basic page layout. */
+
+body {
+    background-color: #121212;
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+  }
+
+/* Making links less ugly */
+a {
+    color: lightgray;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+a.currentPage {
+    color: rgb(126, 126, 126) !important;
+}
+
+.navLinks a:hover {
+    color: rgb(1, 144, 192);
+}
+
+a:hover h1 {
+    color:lightgray !important
+}
+
+/* Navagation styling (Mobile First) */
+
+nav {
+    background-color: #272727f6;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: row-reverse;
+    min-height: 30px;
+    z-index: 10;
+}
+
+nav h1 {
+    margin: 0 10px;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.linksContainer {
+    position: absolute;
+    top: 7vh;
+    right: 0;
+    background-color: #272727f6;
+    padding: 10px;
+    width: 0;
+    display: none;
+    transition: all 1s;
+    z-index: 7000;
+}
+
+.navLinks {
+    padding: 0 5px;
+}
+
+.navLinks a {
+    display: block;
+    margin-left: 10px;
+}
+
+.hamburgerMenu {
+    display: flex;
+    padding: 0px 3px;
+    flex-wrap: wrap;
+    height: 7vh;
+    aspect-ratio: 0.8;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.hamburgerMenu div {
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    height: 5%;
+    border-radius: 25%;
+    transition: all 0.5s;
+}
+
+.menu:hover {
+    .hamburgerMenu div:nth-of-type(1){
+        transform-origin: center left;
+        transform: rotate(45deg);
+    }
+    .hamburgerMenu div:nth-of-type(3){
+        transform-origin: center left;
+        transform: rotate(-45deg);
+    }    
+    .hamburgerMenu div:nth-of-type(2){
+        opacity: 0;
+    }
+}
+
+.menu:hover ~ .linksContainer, .linksContainer:hover {
+    width: 100%;
+    display: block;
+}
+
+img.logo {
+    aspect-ratio: 1;
+    display: block;
+    height: 90%;
+    margin: 5px;
+}
+
+/* Changes for larger screens */
+@media (min-width: 600px) {
+    .menu {
+        display: none;
+    }
+    .navLinks {
+        height: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 0 5px;
+    }
+    .linksContainer {
+        position: static;
+        width: auto;
+        display: block;
+    }
+}
+
+
+
+/* Main Page Layout */
+
+section.content {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    background-color: #272727f6;
+    height: 10vh;
+}
+
+.mainPage {
+    display: flex;
+    min-height: 93vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer a {
+    margin: 10px;
+
+}
+
+.NMP {
+    margin: 0;
+    padding: 0;
+}

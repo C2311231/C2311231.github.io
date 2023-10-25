@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SkySpindle - Docs</title>
+        <meta name="description"
+            content="An open source web based GRBL controller.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords"
+            content="SkySpindle, GRBL, grbl cnc, cnc controller">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/singlePageCSS/_Docs.css">
+        <link rel="icon" type="image/x-icon"
+            href="./assets/images/SkySpindleLogo.svg">
+    </head>
+    <body>
+        <nav id="nav"> <!--Navigation menu WARRNING!!! reversed order-->
+            <div class="menu"> <!--Navigation menu button (for small screens)-->
+                <div class="hamburgerMenu">
+                    <!--Menu Bars-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="linksContainer">
+                <div class="navLinks">
+                    <a tabindex="2" href="./About.html">About</a>
+                    <a tabindex="3" href="./Release.html">Release Notes</a>
+                    <a tabindex="4" href="./Downloads.html">Download</a>
+                    <a tabindex="5" href="./Docs.html" class="currentPage">Docs</a>
+                    <a tabindex="6" href="./FAQ.html">FAQ</a>
+                    <a tabindex="7" href="./Forms.html">Forms</a>
+                </div>
+            </div>
+            <a href="./index.html"><h1 tabindex="1">SkySpindle</h1></a>
+            <img src="./assets/images/SkySpindleLogo.svg" class="logo">
+        </nav>
+        <div class="mainPage">
+            <section class="content">
+                <div class="NMP">
+                    <div class="sidebar">
+                        <div class="links">
+                            <a href="#gettingStarted">Getting Started</a>
+                            <a href="#install">Instatation</a>
+                            <a href="#basic">Basic Usage</a>
+                            <a href="#advanced">Advanced Usage</a>
+                            <a href="#works">How it works</a>
+                            <a href="#future">Future additions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="docs">
+                    <div class="textBanner">
+                        <h1>Docs: </h1>
+                    </div>
+                    <div class="DocsContent">
+                        <h2>Welcome to the Docs</h2>
+                        <h3 id="gettingStarted">Getting Started</h3>
+                        <p>
+                            Welcome to SkySpindle, an open-source GRBL web
+                            controller. Here are some considerations before
+                            installing.
+                        </p>
+                        <p><strong>What this is:</strong></p>
+                        <ul>
+                            <li>A GRBL CNC Controller</li>
+                            <li>A Web interface for GRBL</li>
+                            <li>An easy-to-use CNC interface</li>
+                            <li>Easily modifiable</li>
+                            <li>An open-source option</li>
+                            <li>A program that likely has numerous bugs</li>
+                            <li>A program that doesn't limit the controls at any
+                                time (Will send any command you tell it to the
+                                machine at any time, but the machine may still
+                                refuse it.)</li>
+                        </ul>
+                        <p><strong>What this is <em>NOT!!!</em></strong></p>
+                        <ul>
+                            <li>A program that offers any warranty of any kind</li>
+                            <li>An easy installation for the average person</li>
+                            <li>A remote CNC tool (ONLY TO BE USED LOCALLY)</li>
+                            <li>A tool with any security of any kind</li>
+                            <li>An excuse to leave a CNC machine unattended</li>
+                            <li>A proven reliable program</li>
+                            <li>A program for important manufacturing</li>
+                            <li>A program designed for high-speed operations</li>
+                        </ul>
+                        <p><strong>Recommended uses:</strong></p>
+                        <ul>
+                            <li>Small hobbyist CNC where reliability is not as
+                                important</li>
+                            <li>Situations where more control is needed than UGS
+                                or similar programs offer</li>
+                            <li>Situations where a semi-remote interface is
+                                desired, such as a CNC running in a different
+                                room while doing something else</li>
+                        </ul>
+                        <p><strong>Not recommended uses:</strong></p>
+                        <ul>
+                            <li>Use on important manufacturing</li>
+                            <li>Use on expensive workpieces</li>
+                            <li>Use in nearly any setting other than hobbyist
+                                use</li>
+                            <li>Use with a laser or other time-sensitive
+                                manufacturing</li>
+                            <li>Use on large CNC machines that could possibly
+                                damage themselves</li>
+                        </ul>
+                        <p><strong>Final Warnings:</strong></p>
+                        <ul>
+                            <li>Use only on smaller hobbyist machines</li>
+                            <li>SkySpindle most likely has bugs that may affect
+                                machine operation</li>
+                            <li>This software has only been tested on an Arduino
+                                running GRBL, not an actual operating machine</li>
+                            <li>SkySpindle does not have any verification
+                                messages for anything. (If you press a delete
+                                button for an uploaded file, it is gone without
+                                file recovery software)</li>
+                        </ul>
+                        <h3 id="install">Installation</h3>
+                        <blockquote>
+                            It’s not a bug, it’s a feature!
+                        </blockquote>
+                        <p>There are a few different installation methods to
+                            choose from, but the recommended one is using Git
+                            for easy updating.</p>
+                        <h4>Git Installation</h4>
+                        <p>Allows for easy one-command updates</p>
+                        <h5>Prerequisites</h5>
+                        <ol>
+                            <li>Install Python 3 (Make sure it is added to PATH)</li>
+                            <li>Install Git (Make sure it is added to PATH)</li>
+                        </ol>
+                        <h5>Install</h5>
+                        <ol>
+                            <li>
+                                Open a terminal and navigate to an install
+                                location
+                                <ul>
+                                    <li>On Windows, search 'cmd,' then use the
+                                        'cd' command to navigate to the install
+                                        location. OR navigate to the install
+                                        directory in File Explorer and type
+                                        'cmd' in the bar.</li>
+                                    <li>macOS has NOT been tested!!</li>
+                                    <li>To use the 'cd' command, just type it
+                                        followed by the path of the directory
+                                        you want to install to.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Verify Git and Python installation.
+                                <ol>
+                                    <li>Type 'python' into the terminal; you
+                                        should get a response such as:
+                                        <pre>
+Python 3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64-bit (AMD64)] on win32
+Type "help", "copyright", "credits", or "license" for more information.
+>>>
+                                        </pre>
+                                    </li>
+                                    <li>If it worked (doesn't have to be exact),
+                                        Python was correctly installed. Then
+                                        type 'exit()' to close Python.</li>
+                                    <li>Type 'git' in the terminal, and it
+                                        should return a message ending in
+                                        "See 'git help git' for an overview of the system."</li>
+                                    <li>If anything didn't work, verify that it
+                                        is installed and reinstall if necessary.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                After everything is verified, go to the terminal
+                                and type 'git init,' followed by
+                                'git clone https://github.com/C2311231/SkySpindle.git'.
+                                This should download all of the files.
+                            </li>
+                            <li>
+                                Change to the downloaded directory
+                                'cd ./SkySpindle,' then create a virtual
+                                environment for SkySpindle
+                                'python -m venv ./SkySpindleEnv.'
+                            </li>
+                            <li>
+                                Run './SkySpindleEnv\Scripts\activate.bat' to
+                                activate the virtual environment.
+                            </li>
+                            <li>
+                                Install the dependencies
+                                'pip install -r requirements.txt.'
+                            </li>
+                            <li>
+                                You should now be able to run SkySpindle
+                                'python main.py.'
+                            </li>
+                        </ol>
+                        <blockquote class="tips">
+                            To update, just run
+                            'git pull https://github.com/C2311231/SkySpindle.git main'
+                            in the same directory.
+                        </blockquote>
+                        <h4>Non-Git Installation</h4>
+                        <h5>Prerequisites</h5>
+                        <ol>
+                            <li>Install Python 3 (Make sure it is added to PATH)</li>
+                            <li>Download the <a
+                                    href="https://github.com/C2311231/SkySpindle">SkySpindle
+                                    Zip file</a> from Github</li>
+                        </ol>
+                        <ol>
+                            <li>
+                                Create a folder for the installation and unzip
+                                the zip file into that folder.
+                            </li>
+                            <li>
+                                Open a terminal and navigate to an install
+                                location
+                                <ul>
+                                    <li>On Windows, search 'cmd,' then use the
+                                        'cd' command to navigate to the install
+                                        location. OR navigate to the install
+                                        directory in File Explorer and type
+                                        'cmd' in the bar.</li>
+                                    <li>macOS has NOT been tested!!</li>
+                                    <li>To use the 'cd' command, just type it
+                                        followed by the path of the directory
+                                        you want to install to.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Verify Python installation.
+                                <ol>
+                                    <li>Type 'python' into the terminal; you
+                                        should get a response such as:
+                                        <pre>
+Python 3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64-bit (AMD64)] on win32
+Type "help", "copyright", "credits", or "license" for more information.
+>>>
+                                        </pre>
+                                    </li>
+                                    <li>If it worked (doesn't have to be exact),
+                                        Python was correctly installed. Then
+                                        type 'exit()' to close Python.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Create a virtual environment for SkySpindle
+                                'python -m venv ./SkySpindleEnv.'
+                            </li>
+                            <li>
+                                Run './SkySpindleEnv\Scripts\activate.bat' to
+                                activate the virtual environment.
+                            </li>
+                            <li>
+                                Install the dependencies
+                                'pip install -r requirements.txt.'
+                            </li>
+                            <li>
+                                You should now be able to run SkySpindle
+                                'python main.py.'
+                            </li>
+                        </ol>
+                        <blockquote class="tips">
+                            Updating is done by copying the new files into the
+                            same location as the old ones.
+                        </blockquote>
+                        <blockquote  class="tips">
+                            On the first run, the program will download some
+                            extra files, so it may take a while to see the web
+                            interface.
+                        </blockquote>
+                        <h3 id="basic">Basic Usage</h3>
+                        <p>Once the program is running, go to the web interface
+                            on port 5000 (On the same computer
+                            'http://localhost:5000' or on a different computer
+                            'http://ipAddressOfServer:5000'). From there, you
+                            should be able to connect to a GRBL machine over USB
+                            or Serial and use the controls.</p>
+                        <h4>Interface</h4>
+                        <p>The interface is laid out between three columns. In
+                            the first column contains the manual controls for
+                            the machine as well as overrides and machine
+                            position. A few things to note include that to enter
+                            an exact position you can enter it into the input
+                            box with the current position in it and to zero a
+                            specific axis, click on the machine position for
+                            that axis.</p>
+                        <h4>Connecting to GRBL</h4>
+                        <ol>
+                            <li>
+                                On the top left of the screen is the connection
+                                element. Using the dropdown select the serial
+                                port to connect to.
+                                <ul>
+                                    <li>
+                                        On Windows, it should appear as COM and
+                                        then have a number after it.
+                                    </li>
+                                    <li>
+                                        On Linux, it may appear as '/dev/tty' or
+                                        something similar.
+                                    </li>
+                                </ul>
+                                To test to see if you selected the correct
+                                serial port, check all of the options on the
+                                console to show all messages and then connect.
+                                You should see something like
+                                "Grbl X.Xx ['$' for help]," this means that it
+                                is communicating with GRBL.
+                            </li>
+                            <li>Click Connect</li>
+                            <li>You Should Now Be Able to Control the Machine
+                                With the Interface</li>
+                        </ol>
+                        <h4>Using the interface</h4>
+                        <h5>Jogging</h5>
+                        <p>On the left column under the disconnect button is the
+                            jog section; just click the arrows to jog. To change
+                            the speed with the options in the middle column and
+                            the distance with the slider or input box below the
+                            Jogging Keys.</p>
+                        <h5>Homing</h5>
+                        <p>The homing buttons are to the right of the jog
+                            buttons, and there are options for each axis.</p>
+                        <h5>Spindle Controls</h5>
+                        <p>The manual controls for the spindle are located to
+                            the right of the homing buttons and allow you to
+                            start and stop the spindle. The speed is controlled
+                            by the Spindle Speed next to the jog speed in the
+                            lower middle portion of the screen.</p>
+                        <h5>Position</h5>
+                        <p>The upper position indicators show the machine
+                            position, and upon clicking on them, they will zero
+                            the individual axis.<br>
+                            The lower position indicators show the machine work
+                            position, and if you enter a new value, the machine
+                            will move to that location.</p>
+                        <h5>Coolant Controls</h5>
+                        <p>If the machine is equipped with a coolant system,
+                            they will allow you to toggle flood and mist coolant
+                            manually. Located under the Jog Controls.</p>
+                        <h5>Overrides</h5>
+                        <p>Under the jog distance slider are the sliders for
+                            overriding the spindle speed, rapid speed, and
+                            travel speed. They should not have any effect on the
+                            jog controls. Each slider also has an input box to
+                            type a value.</p>
+                        <h5>Console</h5>
+                        <p>The console is simply a color-coded list of the
+                            commands sent between the machine and the computer.
+                            There are checkboxes for System messages (Commands
+                            from interface messages), Status Messages (Position
+                            data), and Received messages (Responses from the
+                            controller). There is also a clear button to clear
+                            the console and a number input for the number of
+                            items to keep in the console. To send a command,
+                            just type it, then click send.</p>
+                        <h5>Notifications</h5>
+                        <p>The Notifications section is shown by hovering or
+                            clicking on the bell icon and shows if an update is
+                            available</p>
+                        <h5>Connection Status</h5>
+                        <p>If the WebSocket connection is lost with the server,
+                            the dot in the upper right corner of the screen will
+                            turn red and return green upon reconnection.</p>
+                        <h5>Alarm State</h5>
+                        <p>If GRBL is in an ALARM state, then a big popup will
+                            appear on screen with a single button to dismiss the
+                            alarm when the cause is corrected.</p>
+                        <h5>ESTOP</h5>
+                        <p>In the event that something is wrong with the machine
+                            and it needs to be stopped immediately, the ESTOP
+                            button tells the controller to reboot, as is GRBL's
+                            recommended way of implementing an ESTOP. Warning if
+                            the machine is in motion, it will lose its position
+                            and enter an ALARM State.</p>
+                        <h4>Running and Editing Operations</h4>
+                        <p>To add an operation to the list, drag and drop the
+                            G-code file or push the button in the upper right
+                            corner of the Operations Section. The Operations all
+                            have a delete and load button; click load. After it
+                            is loaded, it should appear in the editor to the
+                            right. There you can edit the file and save it with
+                            the button on the top right. When you are done or
+                            don't wish to make any changes, you can click start
+                            to begin the operation. Next to the start button are
+                            the buttons to Stop, Hold, and Pause. They each
+                            serve a different purpose. Stop stops sending the
+                            G-code to the machine and unloads the operation.
+                            Hold stops the machine and the spindle and can be
+                            resumed by pressing the start button. Upon pressing
+                            the start button, the machine should start the
+                            spindle and wait before continuing to give the
+                            spindle time to get up to speed. Pause is the same
+                            as Hold, but Pause has no effect on the spindle.
+                            Hold is good for long pauses, such as if you have to
+                            leave the machine unsupervised, where Pause is
+                            better for short stops, such as to look closer at
+                            the part without the toolhead interfering.</p>
+                        <h5>During Operation</h5>
+                        <p>The override slider can be used to make adjustments
+                            to the machine. The Operations Section should show a
+                            progress bar based on the amount of the file
+                            completed and show some other details such as the
+                            ETA, the time doing the operation, and the file line
+                            number. In the file editor, there should be an
+                            indicator by the last line sent to the machine's
+                            buffer. Making changes to the file will not affect a
+                            live operation!</p>
+                        <h3 id="advanced">Advanced Features</h3>
+                        <blockquote class="warn">
+                            Warning, these features are beginner-friendly;
+                            however, they should only be changed by someone who
+                            knows what they do as these settings affect the
+                            machine directly and will affect any interface
+                            connected to them.
+                        </blockquote>
+                        <p>To access the GRBL settings, click the settings icon
+                            in the upper right-hand corner of the screen. This
+                            will show you a list of the settings, the units for
+                            those settings, the value, and the description of
+                            the setting provided by GRBL. All values are
+                            numerical and are updated with the latest values
+                            from GRBL every 10 seconds. This may cause a value
+                            you changed to change back for a few seconds.</p>
+                        <h3 id="works">How It Works</h3>
+                        <p>SkySpindle makes heavy use of the threading module to
+                            be fast enough for normal operation. The main thread
+                            runs the Flask app to host the webserver, and upon
+                            connection to a machine, two more threads are
+                            started: one to receive and process the responses
+                            from GRBL and the other is passed a list that
+                            contains the commands to send to GRBL. Its main task
+                            is to allow multiple threads to send commands by
+                            appending them to the list instead of sending it
+                            themselves and leading to multiple messages sent at
+                            the same time. If an operation is started, a new
+                            thread is created that simply adds the commands from
+                            the G-code file and makes sure not to overflow the
+                            GRBL buffer. The receiving thread is completely
+                            unaware of what commands are sent to GRBL and has to
+                            figure out what the response is for by just
+                            processing the response itself. If it is a list of
+                            settings values, it creates a dictionary of the
+                            values and then sends it to the web interface. If
+                            the values are position data, then it updates the
+                            necessary variables and waits for the next response.
+                            Periodic requests are handled by the Flask APS
+                            Scheduler, and it just appends commands to the
+                            command list, and the sending thread sends it. The
+                            sending thread also has other functions, such as
+                            starting the Operating thread and handling
+                            adjustments of overrides (GRBL overrides can only be
+                            changed in increments). The sending and receiving
+                            thread also send the data to the web interface for
+                            the console. Unfortunately, the Python threading
+                            module only allows for the "threads" to be run by
+                            the same interpreter, so it only runs on one actual
+                            thread, and the interpreter just switches between
+                            each thread, creating the illusion of multiple
+                            threads. This can be solved by using the
+                            multiprocessing module, but I can't pass objects
+                            between the threads with multiprocessing, so I am
+                            stuck with the threading module until I find a
+                            better solution.<br>
+                            The communication with the client is handled using
+                            Flask-SocketIO. I found that if no client is
+                            specified, then the messages are sent to all clients
+                            so the program can handle multiple clients without
+                            issue! I wanted the web interface to be modular to
+                            allow for easy modification. Each module, for
+                            example, the jog controls, has completely
+                            independent CSS, JS, and HTML files so that with
+                            Jinja templates, you simply have one line to add
+                            that module into one of the columns, and all of the
+                            JS, CSS, and HTML comes along with it. This means
+                            that to change the column one of them appears in,
+                            simply copy the include line and put it in a
+                            different column, allowing for easy customizability.
+                            This also allows easy addition of extensions, simply
+                            put a few files into the right folders and add a
+                            line like "{% include 'Connect.html'%}" to
+                            "main.html," and it is added without modifications
+                            to any other files! There are a few exceptions in
+                            the JavaScript because they all have to access the
+                            same socket connection but are otherwise modular.</p>
+                        <h3 id="future">Future Additions</h3>
+                        <p>Here are a few things I would like to change or add
+                            but most likely won't have time for all of them.
+                            <ul>
+                                <li>Queue multiple files in different locations
+                                    on the workpiece</li>
+                                <li>Data Logging and Graphs</li>
+                                <li>Live Camera Feed</li>
+                                <li>Custom Sensors</li>
+                                <li>UI Updating</li>
+                                <li>Download Files</li>
+                                <li>Limit Overrides
+                                    <ul>
+                                        <li>Prevent Machine from exceeding a
+                                            certain limit</li>
+                                        <li>G-code travels below the workpiece,
+                                            so limit it so it can't in the GUI</li>
+                                    </ul>
+                                </li>
+                                <li>Notifications</li>
+                                <li>Inches Mode</li>
+                                <li>History</li>
+                                <li>Setting Profiles</li>
+                                <li>Multiple Machines</li>
+                                <li>Live machine Simulation</li>
+                                <li>Recover From Failure</li>
+                                <li>Start From Line Number</li>
+                                <li>And Many More!</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <a href="#nav">Return to top</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+.toolbar {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    gap: 10px;
+    padding: 4px;
+    flex-wrap: wrap;
+}
+
+.toolbar button {
+    margin: 3px;
+    background-color: #00000000;
+    border-radius: 0px;
+    border: none;
+    padding: 3px 10px;
+    color: white;
+}
+
+.toolbar button:hover {
+    background-color: gray;
+}
+
+#newTopicBtn {
+    background-color: rgb(39, 39, 39);
+    margin-left: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+#topics {
+    margin: auto;
+    min-width: 90%;
+    max-width: 95vw;
+    text-align: center;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+#topics tr td:first-of-type {
+    text-align: left;
+    padding: 10px;
+    width: 70%;
+}
+#topics tr td:last-of-type {
+    min-width: 100px
+}
+
+
+td .topic h4 {
+    margin: 2px;
+}
+
+td {
+    border-top: thin solid white;
+    border-bottom: thin solid white;
+    min-width: 50px;
+    max-width: 70vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tags span {
+    margin: 2px;
+    background-color: rebeccapurple;
+    padding: 1px 2px;
+}
+
+span.description {
+    color: rgb(121, 121, 121);
+}
+
+#NewPostForm {
+    margin: 10%;
+    display: block;
+    background-image: linear-gradient(to bottom right, #262626, black);
+    padding: 10%;
+    border-radius: 10px;
+    height: 80vh;
+}
+
+#NewPostForm input, #NewPostForm h1, #NewPostForm button[type=submit], #NewPostForm textarea, #NewPostForm label {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+#NewPostForm textarea {
+    width: 80%;
+    height: 40%;
+}
+
+#NewPostForm input {
+    width: 60%;
+}
+
+.TagsInput {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    border: none !important;
+}
+
+.TagsInput input[type=color] {
+    max-width: 50px;
+}
+#NewPostForm button {
+    margin: 10px auto;
+    padding: 5px;
+}

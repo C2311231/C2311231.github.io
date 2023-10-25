@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SkySpindle - Forms</title>
+        <meta name="description"
+            content="An open source web based GRBL controller.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords"
+            content="SkySpindle, GRBL, grbl cnc, cnc controller">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/singlePageCSS/_Forms.css">
+        <link rel="icon" type="image/x-icon"
+            href="./assets/images/SkySpindleLogo.svg">
+    </head>
+    <body>
+        <nav id="nav"> <!--Navigation menu WARRNING!!! reversed order-->
+            <div class="menu"> <!--Navigation menu button (for small screens)-->
+                <div class="hamburgerMenu">
+                    <!--Menu Bars-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="linksContainer">
+                <div class="navLinks">
+                    <a tabindex="2" href="./About.html">About</a>
+                    <a tabindex="3" href="./Release.html">Release Notes</a>
+                    <a tabindex="4" href="./Downloads.html">Download</a>
+                    <a tabindex="5" href="./Docs.html">Docs</a>
+                    <a tabindex="6" href="./FAQ.html">FAQ</a>
+                    <a tabindex="7" href="./Forms.html" class="currentPage">Forms</a>
+                </div>
+            </div>
+            <a href="./index.html"><h1 tabindex="1">SkySpindle</h1></a>
+            <img src="./assets/images/SkySpindleLogo.svg" class="logo">
+        </nav>
+        <div class="mainPage">
+            <section class="content">
+                <div class="textBanner">
+                    <h1>Forms: </h1>
+                </div>
+                <div class="toolbar">
+                    <!-- Not Yet Implimented
+                    <button class="sortingBtn">Catagories</button>
+                    <button class="sortingBtn">New</button>
+                    <button class="sortingBtn">Latest</button>
+                    <button class="sortingBtn">Unread</button>
+                    <button class="sortingBtn">Top</button> -->
+                    <button id="newTopicBtn">New Topic +</button>
+                    <form class="search" action="javascript:void(0);">
+                        <!--In normal use would send to backend and backend would return a page. Currenly does nothing-->
+                        <input type="text" placeholder="Search">
+                        <button type="submit" title="Search">
+                            <!-- Found from bootstrap icons "https://icons.getbootstrap.com/icons/search/" -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div id="tableContainer">
+                    <table id="topics"> <!--Topics table-->
+                        <tr>
+                            <th>Topic</th>
+                            <th>Replies</th>
+                            <th>Views</th>
+                            <th>Last Post</th>
+                        </tr>
+                    </table>  
+                </div>
+            </section>
+            <footer>
+                <a href="#nav">Return to top</a>
+            </footer>
+        </div>
+        <div class="mainPage" style="display: none;"> <!--shown on button click-->
+            <div class="newPost">
+                <form action="javascript: addPost()" id="NewPostForm">
+                    <h2>New Post:</h2>
+                    <input type="text" placeholder="Username" id="usernameInput" required>
+                    <input type="text" placeholder="Title" id="titleInput" required>
+                    <button type="button" id="AddTags">+</button>
+                    <button type="button" onclick="document.getElementsByClassName('TagsInput')[0].deleteRow(-1)">-</button>
+                    <table class="TagsInput">
+                        <tbody>
+                            <tr>
+                                <td><input type="text" placeholder="Tag" required class="tagName"></td>
+                                <td><label for="tagColor">Tag Color:</label></td>
+                                <td><input type="color" id="tagColor" class="tagColor"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <textarea placeholder="Content" id="contentInput" required></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+        <script async defer src="./js/Forms.js"></script>
+    </body>
+</html>

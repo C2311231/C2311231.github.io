@@ -1,0 +1,134 @@
+body {
+    background-color: black;
+    color: lightgray;
+    padding: 0;
+    margin: 0;
+    background-image: url("./assets/background.jpg");
+    background-attachment: fixed;
+}
+
+.post {
+    border: 1px #a5a5a5 solid;
+    min-height: 200px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: black;
+
+}
+
+.postHead {
+    padding: 1%;
+    margin: 0;
+    border-bottom: 1px #a5a5a5 solid;
+    background-color: #222222;
+    display: flex;
+    gap: 10px;
+}
+
+.postHead h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.iconBar {
+    display: none;
+}
+
+nav {
+    height: 5vh;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+}
+
+.navElements a {
+    color: lightgray;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.navElements a:hover {
+    color: aliceblue;
+}
+
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    gap: 10px;
+}
+
+.postContent {
+    margin: 10px;
+    overflow: auto;
+}
+
+.profileImage {
+    border-radius: 50%;
+    display: inline;
+    height: 30px;
+}
+
+@media (max-width:700px) {
+    .iconBar {
+        display: block;
+    }
+    nav {
+        justify-content: end;
+    }
+    .navElements {
+        overflow: hidden;
+        height: 0px;
+        position: absolute;
+        left: -210px;
+        top: 5px;
+        background-color: #141414;
+        width: 200px;
+        padding: 0;
+        transition: height 2s;
+    }
+    .navElements a {
+        display: block;
+    }
+    .menu {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-evenly;
+        }
+    .iconBar {
+        background-color: white;
+        height: 2px;
+        margin: auto 0;
+        width: 30px;
+    }
+    .elementsContainer {
+        position: relative;
+    }
+    .menu:hover, .menu:focus {
+        .navElements{
+            height: 200px;
+            padding: 10px;
+        }
+    }
+}
+
+@media print {
+    nav {
+        display: none
+    }
+    body {
+        background-color: white !important;
+        color: black
+    }
+    img {
+        display: none;
+    }
+
+}
