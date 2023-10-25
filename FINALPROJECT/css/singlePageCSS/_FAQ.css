@@ -2,3 +2,30 @@
     margin: 0 10%;
     width: 80% !important;
 }
+
+table tbody tr:nth-child(odd) {
+    background-color: #262626;
+}
+
+table tbody tr:nth-child(even) {
+    display: none;
+    background-color: #1b1b1b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 10px;
+}
+
+
+#releaseCloseBtn, #timeCloseBtn, #GUICloseBtn,#modCloseBtn {
+    display: none;
+}
+
+tr {
+    width: 100%;
+}

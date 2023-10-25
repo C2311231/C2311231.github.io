@@ -4,12 +4,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>SkySpindle - FAQ</title>
-        <meta name="description" content="An open source web based GRBL controller.">
+        <meta name="description"
+            content="An open source web based GRBL controller.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="SkySpindle, GRBL, grbl cnc, cnc controller">
+        <meta name="keywords"
+            content="SkySpindle, GRBL, grbl cnc, cnc controller">
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/singlePageCSS/_FAQ.css">
-        <link rel="icon" type="image/x-icon" href="./assets/images/SkySpindleLogo.svg">
+        <link rel="icon" type="image/x-icon"
+            href="./assets/images/SkySpindleLogo.svg">
     </head>
     <body>
         <nav id="nav"> <!--Navigation menu WARRNING!!! reversed order-->
@@ -25,7 +28,7 @@
                 <div class="navLinks">
                     <a tabindex="2" href="./About.html">About</a>
                     <a tabindex="3" href="./Release.html">Release Notes</a>
-                    <a tabindex="4" href="./Downloads.html" >Download</a>
+                    <a tabindex="4" href="./Downloads.html">Download</a>
                     <a tabindex="5" href="./Docs.html">Docs</a>
                     <a tabindex="6" href="./FAQ.html" class="currentPage">FAQ</a>
                     <a tabindex="7" href="./Forms.html">Forms</a>
@@ -37,23 +40,150 @@
         <div class="mainPage">
             <section class="content">
                 <h2>FAQ:</h2>
-                <ul>
-                    <li>
-                        When will the first release be?<br>
-                        Hopefully in a month or two
-                    </li>
-                    <li>
-                        How often will there be new releases?<br>
-                        Likely about once a month.
-                    </li>
-                    <li>
-                        
-                    </li>
-                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"><h2>FAQ:</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                When will the first release be?
+                            </td>
+                            <td>
+                                <input id="releaseBtn" type="checkbox" style="display: none;">
+                                <label for="releaseBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class="bi bi-arrows-expand"
+                                        viewBox="0 0 16 16" id="releaseOpenBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16" fill="currentColor"
+                                        class="bi bi-arrows-collapse"
+                                        viewBox="0 0 16 16" id="releaseCloseBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8Zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0Zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793Z" />
+                                    </svg>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr id="releaseSection">
+                            <td colspan="2">
+                                Hopefully in a month or two
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                How often will there be new releases?
+                            </td>
+                            <td>
+                                <input id="timeBtn" type="checkbox" style="display: none;">
+                                <label for="timeBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class="bi bi-arrows-expand"
+                                        viewBox="0 0 16 16" id="timeOpenBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16" fill="currentColor"
+                                        class="bi bi-arrows-collapse"
+                                        viewBox="0 0 16 16" id="timeCloseBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8Zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0Zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793Z" />
+                                    </svg>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr id="timeSection">
+                            <td colspan="2">
+                                Likely about once a month after release.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                When will there be in GUI updating?
+                            </td>
+                            <td>
+                                <input id="GUIBtn" type="checkbox" style="display: none;">
+                                <label for="GUIBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class="bi bi-arrows-expand"
+                                        viewBox="0 0 16 16" id="GUIOpenBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16" fill="currentColor"
+                                        class="bi bi-arrows-collapse"
+                                        viewBox="0 0 16 16"  id="GUICloseBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8Zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0Zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793Z" />
+                                    </svg>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr id="GUISection">
+                            <td colspan="2">
+                                It is being worked on and should be finished in
+                                a few months.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Is SkySpindle easy to modify?
+                            </td>
+                            <td>
+                                <input id="modBtn" type="checkbox" style="display: none;">
+                                <label for="modBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor"
+                                        class="bi bi-arrows-expand"
+                                        viewBox="0 0 16 16" id="modOpenBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16" fill="currentColor"
+                                        class="bi bi-arrows-collapse"
+                                        viewBox="0 0 16 16" id="modCloseBtn">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8Zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0Zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793Z" />
+                                    </svg>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr id="modSection">
+                            <td colspan="2">
+                                Yes, as of now the code base is pretty small just
+                                organized into many files and the only languages
+                                used are Python, HTML, CSS, and JavaScript;
+                                however I am planing to rewrite the program in a
+                                more apropreate language to increase speed,
+                                reliability, and make it much easier to install.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
             <footer>
                 <a href="#nav">Return to top</a>
             </footer>
         </div>
+        <script defer src="./js/FAQ.js"></script>
     </body>
 </html>
