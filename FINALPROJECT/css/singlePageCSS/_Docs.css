@@ -1,21 +1,24 @@
-section.content{
+/* 
+Docs Section Styling 
+ */
+
+
+/* Docs Container */
+section.content {
     display: grid;
     min-height: 80vh;
     height: 100%;
     grid-template-columns: 20% 80%;
 }
 
-.sidebar{
+/* Docs Sidebar */
+.sidebar {
     background-color: #272727f6;
     height: 100vh;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
     width: 20vw;
-}
-
-.DocsContent {
-    padding: 15px;
 }
 
 .sidebar .links a {
@@ -27,14 +30,22 @@ section.content{
     padding: 20px;
 }
 
+/* Main Docs Content (Anything not in the sidebar)*/
+.DocsContent {
+    padding: 15px;
+}
+
+/* Adjustments for smaller screens (Stack everything verticly)*/
 @media (max-width: 600px) {
-    section.content{
+    section.content {
         grid-template-columns: 100%;
     }
+
     .sidebar .links a {
         max-width: auto;
     }
-    .sidebar{
+
+    .sidebar {
         width: 100%;
     }
 }
@@ -42,6 +53,7 @@ section.content{
 blockquote.tips {
     background-color: rgba(255, 255, 0, 0.199);
 }
+
 blockquote.warn {
     background-color: rgba(255, 60, 0, 0.5);
 }
@@ -50,6 +62,7 @@ blockquote {
     padding: 10px;
 }
 
+/*Prevents section from going off screen*/
 pre {
     overflow: scroll;
 }

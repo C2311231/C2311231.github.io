@@ -1,3 +1,6 @@
+
+// I am not very good at js and the course didn't teach js so I am just leaving this how it is
+
 const Table = document.getElementById("topics");
 const NewTopicBtn = document.getElementById("newTopicBtn");
 const MainPage = document.getElementsByClassName('mainPage')
@@ -12,7 +15,7 @@ cookieList.forEach(element => {
     cookies[temp[0].replace(/\s/g, "")] = temp[1]
 });
 
-if (cookies.topics){
+if (cookies.topics) {
     var topics = JSON.parse(cookies.topics)
 }
 else {
@@ -20,7 +23,7 @@ else {
 }
 
 
-function addTopic(topic, tags, replies, description, views, lastpost, count){
+function addTopic(topic, tags, replies, description, views, lastpost, count) {
     var tagsString = '';
     tags.forEach(element => {
         tagsString += `<span style="background-color: ${element.color}">${element.tag}</span>`
@@ -49,23 +52,23 @@ function addTopic(topic, tags, replies, description, views, lastpost, count){
 j = 0
 topics.forEach(element => {
     addTopic(element.topic, element.tags, element.replies, element.description, element.views, element.lastpost, j)
-    j+=1
+    j += 1
 });
 
 
 
-NewTopicBtn.addEventListener('click', function(){
+NewTopicBtn.addEventListener('click', function () {
     MainPage[0].style = 'display: none;'
     MainPage[1].style = 'display: block;'
 })
 
 
-function restorePage(){
+function restorePage() {
     MainPage[0].style = 'display: block;'
     MainPage[1].style = 'display: none;'
 }
 
-function addPost(){
+function addPost() {
     user = document.getElementById("usernameInput")
     title = document.getElementById("titleInput")
     content = document.getElementById("contentInput")
@@ -74,8 +77,8 @@ function addPost(){
     k = 0;
     tagList = []
     tags.forEach(element => {
-        tagList.push({tag: element.value, color: tagColors[k].value})
-        k+=1
+        tagList.push({ tag: element.value, color: tagColors[k].value })
+        k += 1
     });
     var post = {
         topic: title.value,
@@ -99,7 +102,7 @@ function addPost(){
     document.cookie = `topics=${JSON.stringify(topics)}; path=/`;
 }
 window.rows = 1
-AddTags.addEventListener('click', function(){
+AddTags.addEventListener('click', function () {
     window.rows += 1
     document.getElementsByClassName("TagsInput")[0].getElementsByTagName('tbody')[0].innerHTML += `
     <tr>

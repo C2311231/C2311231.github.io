@@ -1,3 +1,8 @@
+/* 
+Styling for the form page (This is the one seen if you view a form post) 
+*/
+
+/* Styling for the topic post */
 .topicPost {
     margin: 10%;
     background-image: linear-gradient(to top right, #262626, black);
@@ -15,6 +20,13 @@
     border-radius: 5px;
 }
 
+.tags span {
+    margin: 2px;
+    background-color: rebeccapurple;
+    padding: 1px 2px;
+}
+
+/* Styling for the replies to the topic post */
 .replyPost {
     margin: 15%;
     background-image: linear-gradient(to top right, #262626, black);
@@ -24,16 +36,18 @@
 
 }
 
-.tags span {
-    margin: 2px;
-    background-color: rebeccapurple;
-    padding: 1px 2px;
-}
-
+/*Styling for the reply form*/
 #replyContent {
     width: 100%;
 }
 
-.content div:nth-of-type(2){
+/*
+Remove the display for the topic post
+
+The topic post is added to the DOM twice due to 
+in the javascript it is in the same list as the other posts
+so the easiest way to fix it is just to hide it as below.
+*/
+.content div:nth-of-type(2) {
     display: none;
 }

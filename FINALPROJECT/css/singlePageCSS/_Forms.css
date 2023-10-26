@@ -1,3 +1,12 @@
+/* 
+This is styling for the Forms page with the list of the saved forms
+(Not the one with replies)
+ */
+
+/*
+ Toolbar styling 
+ (Was planning on adding more features 
+ but don't have time to implment the js) */
 .toolbar {
     display: flex;
     width: 98%;
@@ -29,7 +38,7 @@ button {
     cursor: pointer;
 }
 
-
+/* Styling for the table containg the created topics */
 #topics {
     margin: auto;
     min-width: 90%;
@@ -44,13 +53,9 @@ button {
     padding: 10px;
     width: 70%;
 }
+
 #topics tr td:last-of-type {
     min-width: 100px
-}
-
-
-td .topic h4 {
-    margin: 2px;
 }
 
 td {
@@ -60,6 +65,12 @@ td {
     max-width: 70vw;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+/* Styling for how the topics in the table look */
+td .topic h4 {
+    margin: 2px;
 }
 
 .tags span {
@@ -72,6 +83,7 @@ span.description {
     color: rgb(121, 121, 121);
 }
 
+/* Styling for the form to add more topics/posts */
 #NewPostForm {
     margin: 10%;
     display: block;
@@ -81,7 +93,11 @@ span.description {
     height: 80vh;
 }
 
-#NewPostForm input, #NewPostForm h1, #NewPostForm button[type=submit], #NewPostForm textarea, #NewPostForm label {
+#NewPostForm input,
+#NewPostForm h1,
+#NewPostForm button[type=submit],
+#NewPostForm textarea,
+#NewPostForm label {
     display: block;
     margin: 10px auto;
     padding: 5px;
@@ -106,6 +122,7 @@ span.description {
 .TagsInput input[type=color] {
     max-width: 50px;
 }
+
 #NewPostForm button {
     margin: 10px auto;
     padding: 5px;

@@ -1,3 +1,6 @@
+
+// I am not very good at js and the course didn't teach js so I am just leaving this how it is
+
 var cookieList = decodeURIComponent(document.cookie).split(';')
 
 var cookies = {}
@@ -7,7 +10,7 @@ cookieList.forEach(element => {
 });
 
 
-if (cookies.topics){
+if (cookies.topics) {
     var topics = JSON.parse(cookies.topics)
 }
 else {
@@ -22,23 +25,23 @@ activeTopic = topics[postid]
 
 var tagsString = '';
 activeTopic.tags.forEach(element => {
-        tagsString += `<span style="background-color: ${element.color}">${element.tag}</span>`
+    tagsString += `<span style="background-color: ${element.color}">${element.tag}</span>`
 });
 
-topics[postid].views ++
+topics[postid].views++
 
 document.cookie = `topics=${JSON.stringify(topics)}; path=/`;
 
 
 function addReply() {
-    activeTopic.posts.push({user: document.getElementById("replyUsername").value,title: document.getElementById("replyTitle").value,content: document.getElementById("replyContent").value})
+    activeTopic.posts.push({ user: document.getElementById("replyUsername").value, title: document.getElementById("replyTitle").value, content: document.getElementById("replyContent").value })
     UpdatePage(activeTopic);
     activeTopic.replies += 1;
     activeTopic.lastpost = new Date()
     topics[postid] = activeTopic
     document.cookie = `topics=${JSON.stringify(topics)}; path=/`;
 }
-function UpdatePage(activeTopic){
+function UpdatePage(activeTopic) {
     document.getElementsByClassName('content')[0].innerHTML = '<div class="topicPost"></div>'
     const Topic = document.getElementsByClassName("topicPost")[0]
     Topic.innerHTML = `
@@ -62,7 +65,7 @@ UpdatePage(activeTopic);
 const ReplyBTN = document.getElementById("ReplyBTN")
 
 
-ReplyBTN.addEventListener('click', function() {
+ReplyBTN.addEventListener('click', function () {
     document.getElementsByClassName('content')[0].innerHTML += `
     <div class="replyPost" id="response">
         <h1><input type="text" placeholder="Title" autofocus id="replyTitle"></h1>
