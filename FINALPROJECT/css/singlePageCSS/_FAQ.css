@@ -29,3 +29,15 @@ table tr td {
 tr {
     width: 100%;
 }
+.noDisp {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+/* Allows tabbing throught the buttons and telling which is selected*/
+.noDisp:focus + label{
+    color: yellow;
+}

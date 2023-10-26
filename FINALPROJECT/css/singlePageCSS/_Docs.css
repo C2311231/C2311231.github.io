@@ -21,7 +21,6 @@ section.content{
 .sidebar .links a {
     display: block;
     margin: 10px;
-    max-width: 20vw;
 }
 
 .sidebar .links {
