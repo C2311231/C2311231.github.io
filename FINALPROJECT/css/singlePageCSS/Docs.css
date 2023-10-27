@@ -47,15 +47,41 @@ section.content {
 
     .sidebar {
         width: 100%;
+        height: auto;
+    }
+    div.twoColl {
+        grid-template-columns: 100% !important;
+    }
+    .workSection p {
+        column-count: 1 !important;
     }
 }
 
-blockquote.tips {
-    background-color: rgba(255, 255, 0, 0.199);
+@media (max-width: 850px) and (min-width: 600px) {
+    .workSection p {
+        column-count: 2 !important;
+    }
 }
 
-blockquote.warn {
+div.tips {
+    background-color: rgba(255, 255, 0, 0.199);
+    padding: 30px 10px;
+    margin: 10px auto;
+    width: 80%;    
+    border: thin yellow solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+div.warn {
     background-color: rgba(255, 60, 0, 0.5);
+    padding: 30px 10px;
+    margin: 10px auto;
+    width: 80%;
+    border: thin red solid;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
 blockquote {
@@ -71,11 +97,6 @@ img {
     max-width: 100%;
 }
 
-@media (max-width: 600px) {
-    div.twoColl {
-        grid-template-columns: 100% !important;
-    }
-}
 .twoColl {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -84,3 +105,12 @@ img {
 .fiftyfifty {
     grid-template-columns: 50% 50% !important;
 }
+
+.workSection p {
+    column-count: 3;
+}
+/*Makes line breaks seperate the text more*/
+br {
+    display: block;
+    margin: 10px 0;
+ }
