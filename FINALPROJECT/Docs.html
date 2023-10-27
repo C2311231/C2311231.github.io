@@ -274,143 +274,218 @@ Type "help", "copyright", "credits", or "license" for more information.
                             interface.
                         </blockquote>
                         <h3 id="basic">Basic Usage</h3>
-                        <img src="./assets/images/SkySpindleImages/Disconnected.png" alt="Image of Interface disconected from GRBL">
-                        <p>Once the program is running, go to the web interface
-                            on port 5000 (On the same computer
-                            'http://localhost:5000' or on a different computer
-                            'http://ipAddressOfServer:5000'). From there, you
-                            should be able to connect to a GRBL machine over USB
-                            or Serial and use the controls.</p>
-                        <h4>Interface</h4>
-                        <p>The interface is laid out between three columns. In
-                            the first column contains the manual controls for
-                            the machine as well as overrides and machine
-                            position. A few things to note include that to enter
-                            an exact position you can enter it into the input
-                            box with the current position in it and to zero a
-                            specific axis, click on the machine position for
-                            that axis.</p>
-                        <h4>Connecting to GRBL</h4>
-                        <ol>
-                            <li>
-                                On the top left of the screen is the connection
-                                element. Using the dropdown select the serial
-                                port to connect to.
-                                <ul>
-                                    <li>
-                                        On Windows, it should appear as COM and
-                                        then have a number after it.
-                                    </li>
-                                    <li>
-                                        On Linux, it may appear as '/dev/tty' or
-                                        something similar.
-                                    </li>
-                                </ul>
-                                To test to see if you selected the correct
-                                serial port, check all of the options on the
-                                console to show all messages and then connect.
-                                You should see something like
-                                "Grbl X.Xx ['$' for help]," this means that it
-                                is communicating with GRBL.
-                            </li>
-                            <li>Click Connect</li>
-                            <li>You Should Now Be Able to Control the Machine
-                                With the Interface</li>
-                        </ol>
-                        <img src="./assets/images/SkySpindleImages/Connected.png" alt="Image of Interface connected to GRBL">
+                        <div>
+                            <img
+                                src="./assets/images/SkySpindleImages/Connected.png"
+                                alt="Image of Interface connected to GRBL">
+                            <figcaption>Image of SkySpindle Connected to GRBL</figcaption>
+                        </div>
                         <h4>Using the interface</h4>
-                        <h5>Jogging</h5>
-                        <img src="./assets/images/SkySpindleImages/Jog Controls.png" alt="Close up of Jog Controls">
-                        <p>On the left column under the disconnect button is the
-                            jog section; just click the arrows to jog. To change
-                            the speed with the options in the middle column and
-                            the distance with the slider or input box below the
-                            Jogging Keys.</p>
-                        <h5>Homing</h5>
-                        <p>The homing buttons are to the right of the jog
-                            buttons, and there are options for each axis.</p>
-                        <h5>Spindle Controls</h5>
-                        <p>The manual controls for the spindle are located to
-                            the right of the homing buttons and allow you to
-                            start and stop the spindle. The speed is controlled
-                            by the Spindle Speed next to the jog speed in the
-                            lower middle portion of the screen.</p>
-                        <h5>Position</h5>
-                        <p>The upper position indicators show the machine
-                            position, and upon clicking on them, they will zero
-                            the individual axis.<br>
-                            The lower position indicators show the machine work
-                            position, and if you enter a new value, the machine
-                            will move to that location.</p>
-                        <h5>Coolant Controls</h5>
-                        <p>If the machine is equipped with a coolant system,
-                            they will allow you to toggle flood and mist coolant
-                            manually. Located under the Jog Controls.</p>
-                        <h5>Overrides</h5>
-                        <p>Under the jog distance slider are the sliders for
-                            overriding the spindle speed, rapid speed, and
-                            travel speed. They should not have any effect on the
-                            jog controls. Each slider also has an input box to
-                            type a value.</p>
-                        <h5>Console</h5>
-                        <img src="./assets/images/SkySpindleImages/Console.png" alt="Console section image">
-                        <p>The console is simply a color-coded list of the
-                            commands sent between the machine and the computer.
-                            There are checkboxes for System messages (Commands
-                            from interface messages), Status Messages (Position
-                            data), and Received messages (Responses from the
-                            controller). There is also a clear button to clear
-                            the console and a number input for the number of
-                            items to keep in the console. To send a command,
-                            just type it, then click send.</p>
+                        <div class="twoColl fiftyfifty">
+                            <div>
+                                <h5>Jogging</h5>
+                                <p>On the left column under the disconnect
+                                    button is the
+                                    jog section; just click the arrows to jog.
+                                    To change
+                                    the speed with the options in the middle
+                                    column and
+                                    the distance with the slider or input box
+                                    below the
+                                    Jogging Keys.</p>
+                                <h5>Homing</h5>
+                                <p>The homing buttons are to the right of the
+                                    jog
+                                    buttons, and there are options for each
+                                    axis.</p>
+                                <h5>Spindle Controls</h5>
+                                <p>The manual controls for the spindle are
+                                    located to
+                                    the right of the homing buttons and allow
+                                    you to
+                                    start and stop the spindle. The speed is
+                                    controlled
+                                    by the Spindle Speed next to the jog speed
+                                    in the
+                                    lower middle portion of the screen.</p>
+                                <h5>Position</h5>
+                                <p>The upper position indicators show the
+                                    machine
+                                    position, and upon clicking on them, they
+                                    will zero
+                                    the individual axis.<br>
+                                    The lower position indicators show the
+                                    machine work
+                                    position, and if you enter a new value, the
+                                    machine
+                                    will move to that location.</p>
+                                <h5>Coolant Controls</h5>
+                                <p>If the machine is equipped with a coolant
+                                    system,
+                                    they will allow you to toggle flood and mist
+                                    coolant
+                                    manually. Located under the Jog Controls.</p>
+                                <h5>Overrides</h5>
+                                <p>Under the jog distance slider are the sliders
+                                    for
+                                    overriding the spindle speed, rapid speed,
+                                    and
+                                    travel speed. They should not have any
+                                    effect on the
+                                    jog controls. Each slider also has an input
+                                    box to
+                                    type a value.</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Jog Controls.png"
+                                    alt="Close up of Jog Controls">
+                                <figcaption>Jog Controls Section</figcaption>
+                            </div>
+                        </div>
+                        <div class="twoColl fiftyfifty">
+                            <div>
+                                <h5>Console</h5>
+                                <p>The console is simply a color-coded list of
+                                    the
+                                    commands sent between the machine and the
+                                    computer.
+                                    There are checkboxes for System messages
+                                    (Commands
+                                    from interface messages), Status Messages
+                                    (Position
+                                    data), and Received messages (Responses from
+                                    the
+                                    controller). There is also a clear button to
+                                    clear
+                                    the console and a number input for the
+                                    number of
+                                    items to keep in the console. To send a
+                                    command,
+                                    just type it, then click send.</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Console.png"
+                                    alt="Console section image">
+                                <figcaption>Console Section</figcaption>
+                            </div>
+                        </div>
                         <h5>Notifications</h5>
                         <p>The Notifications section is shown by hovering or
                             clicking on the bell icon and shows if an update is
                             available</p>
-                        <h5>Connection Status</h5>
-                        <img src="./assets/images/SkySpindleImages/Interface Live.png" alt="Interface with working status indicator">
-                        <p>If the WebSocket connection is lost with the server,
-                            the dot in the upper right corner of the screen will
-                            turn red and return green upon reconnection.</p>
-                        <h5>Alarm State</h5>
-                        <p>If GRBL is in an ALARM state, then a big popup will
-                            appear on screen with a single button to dismiss the
-                            alarm when the cause is corrected.</p>
-                        <h5>ESTOP</h5>
-                        <p>In the event that something is wrong with the machine
-                            and it needs to be stopped immediately, the ESTOP
-                            button tells the controller to reboot, as is GRBL's
-                            recommended way of implementing an ESTOP. Warning if
-                            the machine is in motion, it will lose its position
-                            and enter an ALARM State.</p>
+                        <div class="twoColl">
+                            <div>
+                                <h5>Connection Status</h5>
+                                <p>If the WebSocket connection is lost with the
+                                    server,
+                                    the dot in the upper right corner of the
+                                    screen will
+                                    turn red and return green upon reconnection.</p>
+                                <h5>Alarm State</h5>
+                                <p>If GRBL is in an ALARM state, then a big
+                                    popup will
+                                    appear on screen with a single button to
+                                    dismiss the
+                                    alarm when the cause is corrected.</p>
+                                <h5>ESTOP</h5>
+                                <p>In the event that something is wrong with the
+                                    machine
+                                    and it needs to be stopped immediately, the
+                                    ESTOP
+                                    button tells the controller to reboot, as is
+                                    GRBL's
+                                    recommended way of implementing an ESTOP.
+                                    Warning if
+                                    the machine is in motion, it will lose its
+                                    position
+                                    and enter an ALARM State.</p>
+
+                            </div>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Interface Live.png"
+                                    alt="Interface with working status indicator">
+                                <figcaption>Live Operation Interface</figcaption>
+                            </div>
+                        </div>
                         <h4>Running and Editing Operations</h4>
-                        <img src="./assets/images/SkySpindleImages/File Editor.png" alt="Image of File Editor">
-                        <img src="./assets/images/SkySpindleImages/Operations.png" alt="Image of Operation Section">
-                        <img src="./assets/images/SkySpindleImages/Loaded Operation.png" alt="Image of Operation Section With File Loaded">
-                        <p>To add an operation to the list, drag and drop the
-                            G-code file or push the button in the upper right
-                            corner of the Operations Section. The Operations all
-                            have a delete and load button; click load. After it
-                            is loaded, it should appear in the editor to the
-                            right. There you can edit the file and save it with
-                            the button on the top right. When you are done or
-                            don't wish to make any changes, you can click start
-                            to begin the operation. Next to the start button are
-                            the buttons to Stop, Hold, and Pause. They each
-                            serve a different purpose. Stop stops sending the
-                            G-code to the machine and unloads the operation.
-                            Hold stops the machine and the spindle and can be
-                            resumed by pressing the start button. Upon pressing
-                            the start button, the machine should start the
-                            spindle and wait before continuing to give the
-                            spindle time to get up to speed. Pause is the same
-                            as Hold, but Pause has no effect on the spindle.
-                            Hold is good for long pauses, such as if you have to
-                            leave the machine unsupervised, where Pause is
-                            better for short stops, such as to look closer at
-                            the part without the toolhead interfering.</p>
+                        <div class="twoColl">
+                            <p>
+                                To add an operation to the list, drag and drop
+                                the
+                                G-code file or push the button in the upper
+                                right
+                                corner of the Operations Section. The Operations
+                                all
+                                have a delete and load button; click load.
+                            </p>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Operations.png"
+                                    alt="Image of Operation Section">
+                                <figcaption>Image of Operation Section</figcaption>
+                            </div>
+                        </div>
+                        <div class="twoColl fiftyfifty">
+                            <p>
+                                After it
+                                is loaded, it should appear in the editor to the
+                                right. There you can edit the file and save it
+                                with
+                                the button on the top right. When you are done
+                                or
+                                don't wish to make any changes, you can click
+                                start
+                                to begin the operation.
+                            </p>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/File Editor.png"
+                                    alt="Image of File Editor">
+                                <figcaption>File Editor</figcaption>
+                            </div>
+                        </div>
+
+                        <div class="twoColl">
+                            <p>
+                                Next to the start button are
+                                the buttons to Stop, Hold, and Pause. They each
+                                serve a different purpose. Stop stops sending
+                                the
+                                G-code to the machine and unloads the operation.
+                                Hold stops the machine and the spindle and can
+                                be
+                                resumed by pressing the start button. Upon
+                                pressing
+                                the start button, the machine should start the
+                                spindle and wait before continuing to give the
+                                spindle time to get up to speed. Pause is the
+                                same
+                                as Hold, but Pause has no effect on the spindle.
+                                Hold is good for long pauses, such as if you
+                                have to
+                                leave the machine unsupervised, where Pause is
+                                better for short stops, such as to look closer
+                                at
+                                the part without the toolhead interfering.
+                            </p>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Loaded Operation.png"
+                                    alt="Image of Operation Section With File Loaded">
+                                <figcaption>Image of Loaded Operation Section</figcaption>
+                            </div>
+                        </div>
                         <h5>During Operation</h5>
-                        <img src="./assets/images/SkySpindleImages/Interface Live.png" alt="Image of SkySpindle Interface durring an Operation">
+                        <div>
+                            <img
+                                src="./assets/images/SkySpindleImages/Interface Live.png"
+                                alt="Image of SkySpindle Interface durring an Operation">
+                            <figcaption>Image of SkySpindle Interface durring an
+                                Operation</figcaption>
+                        </div>
                         <p>The override slider can be used to make adjustments
                             to the machine. The Operations Section should show a
                             progress bar based on the amount of the file
@@ -418,9 +493,32 @@ Type "help", "copyright", "credits", or "license" for more information.
                             ETA, the time doing the operation, and the file line
                             number. In the file editor, there should be an
                             indicator by the last line sent to the machine's
-                            buffer. Making changes to the file will not affect a
-                            live operation!</p>
+                            buffer. <strong>Making changes to the file will not
+                                affect a
+                                live operation!</strong></p>
                         <h3 id="advanced">Advanced Features</h3>
+                        <div class="twoColl">
+
+                            <p>To access the GRBL settings, click the settings
+                                icon
+                                in the upper right-hand corner of the screen.
+                                This
+                                will show you a list of the settings, the units
+                                for
+                                those settings, the value, and the description
+                                of
+                                the setting provided by GRBL. All values are
+                                numerical and are updated with the latest values
+                                from GRBL every 10 seconds. This may cause a
+                                value
+                                you changed to change back for a few seconds.</p>
+                            <div>
+                                <img
+                                    src="./assets/images/SkySpindleImages/Settings.png"
+                                    alt="Image of GRBL Setting Section">
+                                <figcaption>GRBL Setting Section</figcaption>
+                            </div>
+                        </div>
                         <blockquote class="warn">
                             Warning, these features are beginner-friendly;
                             however, they should only be changed by someone who
@@ -428,15 +526,7 @@ Type "help", "copyright", "credits", or "license" for more information.
                             machine directly and will affect any interface
                             connected to them.
                         </blockquote>
-                        <img src="./assets/images/SkySpindleImages/Settings.png" alt="Image of GRBL Setting Section">
-                        <p>To access the GRBL settings, click the settings icon
-                            in the upper right-hand corner of the screen. This
-                            will show you a list of the settings, the units for
-                            those settings, the value, and the description of
-                            the setting provided by GRBL. All values are
-                            numerical and are updated with the latest values
-                            from GRBL every 10 seconds. This may cause a value
-                            you changed to change back for a few seconds.</p>
+
                         <h3 id="works">How It Works</h3>
                         <p>SkySpindle makes heavy use of the threading module to
                             be fast enough for normal operation. The main thread
