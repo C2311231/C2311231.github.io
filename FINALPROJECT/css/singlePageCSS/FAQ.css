@@ -1,0 +1,55 @@
+/* 
+Basic Styling for the FAQ page
+ */
+
+.content {
+    margin: 0 10%;
+    width: 80% !important;
+}
+
+/* FAQ table CSS */
+table tbody tr:nth-child(odd) {
+    background-color: #262626;
+}
+
+table tbody tr:nth-child(even) {
+    display: none;
+    background-color: #1b1b1b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 10px;
+}
+
+
+#releaseCloseBtn,
+#timeCloseBtn,
+#GUICloseBtn,
+#modCloseBtn {
+    display: none;
+}
+
+tr {
+    width: 100%;
+}
+
+.noDisp {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Allows tabbing throught the buttons and telling which is selected*/
+.noDisp:focus+label {
+    color: yellow;
+}
