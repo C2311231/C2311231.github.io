@@ -2,11 +2,11 @@ WEBVTT
 
 1
 01:00:00.000 --> 01:00:13.116
-<b>To began installation open a terminal and navagate or create an install directory</b>
+<b>To begin installation, open a terminal and navigate or create an installation directory</b>
 
 2
 01:00:13.116 --> 01:00:17.849
-<b>Type "python" in the terminal to verify it's installation</b>
+<b>Type "python" in the terminal to verify its installation</b>
 
 3
 01:00:17.849 --> 01:00:22.699
@@ -14,11 +14,11 @@ WEBVTT
 
 4
 01:00:22.699 --> 01:00:28.883
-<b>Type "git" in the terminal to verify it's installation</b>
+<b>Type "git" in the terminal to verify its installation</b>
 
 5
 01:00:28.883 --> 01:00:33.349
-<b>Type "git init" to create a empty repository</b>
+<b>Type "git init" to create an empty repository</b>
 
 6
 01:00:33.349 --> 01:00:41.516
@@ -42,17 +42,12 @@ WEBVTT
 
 11
 01:01:26.699 --> 01:01:40.266
-<b>Install the dependencies "pip install -r requirements.txt"</b>
+<b>Run SkySpindle "python main.py"</b>
 
 12
-01:01:54.300 --> 01:01:59.650
-<b>You can now run SkySpindle "python main.py"</b>
+01:02:11.283 --> 01:02:16.883
+<b>You may have to allow access to the network</b>
 
 13
-01:02:11.283 --> 01:02:16.883
-<b>You may have to allow accsess to the network</b>
-
-14
 01:02:26.016 --> 01:02:35.250
-<b>Connect to your CNC machine and the installation is complete</b>
-
+<b>Connect to your CNC machine, and the installation is complete</b>
