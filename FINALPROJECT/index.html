@@ -10,8 +10,9 @@
         <meta name="keywords"
             content="SkySpindle, GRBL, grbl cnc, cnc controller">
         <link rel="stylesheet" href="./css/global.css">
-        <link rel="icon" type="image/x-icon"
-            href="./assets/images/SkySpindleLogo.svg">
+        <link rel="icon" type="image/x-icon" href="./assets/images/SkySpindleLogo.svg">
+        <link rel="stylesheet" href="./css/singlePageCSS/index.css">
+        <link rel="stylesheet" href="./css/common.css">
     </head>
     <body>
         <nav id="nav"> <!--Navigation menu WARRNING!!! reversed order-->
@@ -38,38 +39,48 @@
         </nav>
         <div class="mainPage">
             <section class="content">
-                <h1>Welcome to SkySpindle</h1>
-                A lightweight and stylish CNC control program made to mimic the
-                appearance of Mainsail but for grbl.
-                <h2>Features</h2>
-                <ul>
-                    <li>
-                        Webinterface: SkySpindle interface is hosted on a
-                        webserver so access it anywhere on the local network!
-                    </li>
-                    <li>
-                        Easy File Uploading and Editing: Simply drag and drop
-                        files to be added and select any file to show in the
-                        editor with syntax highlighting!
-                    </li>
-                    <li>
-                        Line Gcode progress: The editor shows a indicator on the
-                        last line sent to the CNC machine.
-                    </li>
-                    <li>
-                        Live Console Access: See what is being sent to and
-                        received from the machine at anytime!
-                    </li>
-                    <li>
-                        No Command Limitations: Any typeable command can be sent
-                        to the machine at anytime!
-                    </li>
-                    <li>
-                        Emergency Stop: Easy to access emergency stop button
-                        restarts the controler instantly and will come up in an
-                        alarm state if the machine is in motion.
-                    </li>
-                </ul>
+                <div class="imageBanner textBanner">
+                    <div class="textBanner">
+                        <h1>Welcome to SkySpindle</h1>
+                        <p>
+                            A lightweight and stylish CNC control program made to mimic the
+                            appearance of Mainsail but for grbl.
+                        </p>
+                    </div>
+                </div>
+ 
+                <div class="margin">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>
+                            Webinterface: SkySpindle interface is hosted on a
+                            webserver so access it anywhere on the local network!
+                        </li>
+                        <li>
+                            Easy File Uploading and Editing: Simply drag and drop
+                            files to be added and select any file to show in the
+                            editor with syntax highlighting!
+                        </li>
+                        <li>
+                            Line Gcode progress: The editor shows a indicator on the
+                            last line sent to the CNC machine.
+                        </li>
+                        <li>
+                            Live Console Access: See what is being sent to and
+                            received from the machine at anytime!
+                        </li>
+                        <li>
+                            No Command Limitations: Any typeable command can be sent
+                            to the machine at anytime!
+                        </li>
+                        <li>
+                            Emergency Stop: Easy to access emergency stop button
+                            restarts the controler instantly and will come up in an
+                            alarm state if the machine is in motion.
+                        </li>
+                    </ul>
+                </div>
+
             </section>
             <footer>
                 <a id="topPageLink" href="#nav"><!--Is fixed to bottom left corrner of screen-->

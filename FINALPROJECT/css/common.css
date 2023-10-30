@@ -10,8 +10,13 @@
 
 .textBanner h1 {
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
     left: 20px;
+}
+.textBanner p {
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
 }
 
 /* Search Bar (Never Ended Up getting used again)*/

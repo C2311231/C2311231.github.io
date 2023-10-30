@@ -1,0 +1,19 @@
+.textBanner {
+    background-image: none !important;
+    backdrop-filter: brightness(50%) blur(2px);
+    z-index: 10;
+    top: 0;
+}
+.imageBanner {
+    background-image: url("../../assets/images/SkySpindleImages/Interface\ Live.png") !important;
+    background-attachment:fixed;
+    background-color: #262626;
+    top: 0;
+    z-index: 0;
+    position: relative !important;
+}
+
+.margin {
+    width: 80%;
+    margin: auto;
+}
