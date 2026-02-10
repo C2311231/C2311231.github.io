@@ -20,7 +20,7 @@ function CanvasGameOfLife() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = 800 * dpr;
     canvas.height = 400 * dpr;
-    const game = new GameOfLife(Math.floor(100*(9/16)), Math.floor(100*(16/9)), canvas, 18, 50);
+    const game = new GameOfLife(Math.floor(100*(9/16)), Math.floor(100*(16/9)), canvas, 15, 30);
     let animationFrameId;
 
     // Example: simple animation loop
@@ -36,7 +36,7 @@ function CanvasGameOfLife() {
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute opacity-50 inset-0 z-0 w-full h-full" style={{ filter: "blur(3px)" }}/>;
+  return <canvas ref={canvasRef} className="absolute opacity-50 inset-0 z-0 w-full h-full" style={{ filter: "blur(5px)" }}/>;
 }
 
 class GameOfLife {
@@ -70,16 +70,17 @@ class GameOfLife {
         if (this.board[row][col] == 1) {
           newBoard[row][col] = aliveNeighbors == 2 || aliveNeighbors == 3 ? 1 : 0;
         } else {
-          newBoard[row][col] = aliveNeighbors == 3 || (aliveNeighbors == 2 & Math.random() > 0.995) ? 1 : 0;
+          const spontaneousGrowth = aliveNeighbors === 2 && Math.random() > 0.995;
+          newBoard[row][col] = aliveNeighbors == 3 || spontaneousGrowth ? 1 : 0;
         }
       }
     }
 
     
     const extendCreature = (x, y, depth = 0) => {
-      if (depth > 10) return; // prevent infinite recursion
+      if (depth > 10) return;
 
-      const neighbors = this.getAliveNeighbors(y, x); // check row/col order
+      const neighbors = this.getAliveNeighbors(y, x);
       if (neighbors.length === 8) {
         const [r, c] = neighbors[Math.floor(Math.random() * neighbors.length)];
         extendCreature(r, c, depth + 1);
@@ -138,15 +139,17 @@ class GameOfLife {
 
   drawBoard() {
     const ctx = this.canvas.getContext("2d");
+    const dpr = window.devicePixelRatio || 1;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const cellSizeX = this.canvas.width / (this.cols-2*this.margin);
     const cellSizeY = this.canvas.height / (this.rows-2*this.margin);
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     for (let row = this.margin; row < this.rows-this.margin; row++) {
       for (let col = this.margin; col < this.cols-this.margin; col++) {
         ctx.fillStyle = this.board[row][col] === 1 ? "black" : "transparent";
-        if (row === this.mouseY && col === this.mouseX) {
-          ctx.fillStyle = "rgba(50, 50, 50, 0.8)";
-        }
+        // if (row === this.mouseY && col === this.mouseX) {
+        //   ctx.fillStyle = "rgba(50, 50, 50, 0.8)";
+        // }
         ctx.fillRect((col-this.margin) * cellSizeX, (row-this.margin) * cellSizeY, cellSizeX, cellSizeY);
       }
     }
@@ -163,6 +166,5 @@ class GameOfLife {
     const row = Math.floor(y / cellSizeY) + this.margin;
     this.mouseX = col;
     this.mouseY = row;
-    console.log(this.mouseX, this.mouseY, row, col, cellSizeX, cellSizeY);
   }
 }
